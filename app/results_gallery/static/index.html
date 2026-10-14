@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batch results gallery</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Batch results gallery</h1>
+      <p id="summary">Loading…</p>
+    </div>
+    <div class="bar">
+      <div class="filters">
+        <label class="field">
+          <span>Phase</span>
+          <select id="phase" aria-label="Phase"></select>
+        </label>
+        <label class="field">
+          <span>Model</span>
+          <select id="model" aria-label="Model"></select>
+        </label>
+        <label class="field">
+          <span>Run</span>
+          <select id="run" aria-label="Run"></select>
+        </label>
+        <label class="field">
+          <span>Operation</span>
+          <select id="operation" aria-label="Operation"></select>
+        </label>
+        <label class="field" id="case-field">
+          <span>Case</span>
+          <select id="case" aria-label="Case"></select>
+        </label>
+        <label class="field">
+          <span>Status</span>
+          <select id="status" aria-label="Status">
+            <option value="">All statuses</option>
+            <option value="ok">Has result</option>
+            <option value="missing">Missing</option>
+            <option value="error">Error</option>
+          </select>
+        </label>
+        <label class="field search-field">
+          <span>Search</span>
+          <input id="search" type="search" placeholder="id or prompt" aria-label="Search id or prompt" />
+        </label>
+      </div>
+      <button id="reload" type="button" aria-label="Reload">Reload</button>
+    </div>
+    <p id="context" hidden></p>
+  </header>
+  <details id="warnings" hidden></details>
+  <main id="grid"></main>
+  <nav id="pager" hidden></nav>
+  <div id="viewer" class="modal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+      <div class="sheet-head">
+        <div>
+          <h2 id="viewer-title"></h2>
+          <p id="viewer-kicker"></p>
+        </div>
+        <div class="sheet-nav">
+          <button id="viewer-prev" type="button">Prev</button>
+          <button id="viewer-next" type="button">Next</button>
+          <button id="viewer-close" type="button">Close</button>
+        </div>
+      </div>
+      <p id="viewer-prompt"></p>
+      <p id="viewer-error" hidden></p>
+      <div class="pair">
+        <div class="pane">
+          <div class="frame-wrap">
+            <div id="viewer-input" class="frame"></div>
+          </div>
+          <p class="pane-label">Input</p>
+          <div class="feedback">
+            <button id="viewer-like" type="button" class="icon-btn" aria-label="Like"></button>
+            <button id="viewer-dislike" type="button" class="icon-btn" aria-label="Dislike"></button>
+            <button id="viewer-comment-btn" type="button" class="icon-btn" aria-label="Comment"></button>
+          </div>
+          <textarea id="viewer-comment" class="comment-box" hidden placeholder="Add a comment" aria-label="Comment"></textarea>
+        </div>
+        <div class="pane">
+          <div class="frame-wrap">
+            <div id="viewer-output" class="frame"></div>
+            <button id="viewer-gt" type="button" class="gt-toggle" hidden aria-label="Show ground truth"></button>
+          </div>
+          <p class="pane-label" id="viewer-result-label">Output</p>
+        </div>
+      </div>
+      <p id="viewer-pos"></p>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

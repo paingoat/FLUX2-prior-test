@@ -16,6 +16,7 @@ Reference images larger than 1024×1024 are scaled down to that area. Each side 
 ```
 app/gradio_inference/app.py     interactive editor
 app/batch_inference/run_batch.py
+app/results_gallery/server.py   batch results gallery
 app/common/                     pipeline, env, comparison image
 data/VIBE_test/<operation>/     add, relocate, remove, replace
 data/Prior_test/<operation>/<case>/
@@ -91,6 +92,23 @@ output/batch/<flux2-klein-distill|flux2-klein-base>/run-<timestamp>/
 ```
 
 `results.json` is rewritten after every new image. Paths inside it are relative to the repo (inputs) or to the case folder (`results/<file>`).
+
+## Results gallery
+
+A local viewer lists every VIBE and Prior sample and, when present, the batch PNG for the selected model and run. Missing results show an empty frame. On Prior only, an eye button on the output pane toggles ground truth in place of the model output. Like / dislike / comment controls write to `app/results_gallery/feedback.json`.
+
+```bash
+python app/results_gallery/server.py
+python app/results_gallery/server.py --port 8503
+```
+
+Open http://127.0.0.1:8502 (port 8502 so it can run next to the Prior input viewer on 8501). From a laptop:
+
+```bash
+ssh -L 8502:localhost:8502 user@host
+```
+
+The catalog is built from metadata even when `output/batch` is still empty. Click **Reload** after a batch run writes new images. JPEG thumbnails go in `app/results_gallery/.cache/` (Pillow; without Pillow the thumb route serves the original file).
 
 ## RTX 5090
 
