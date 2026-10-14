@@ -21,6 +21,7 @@ app/common/                     pipeline, env, comparison image
 data/VIBE_test/<operation>/     add, relocate, remove, replace
 data/Prior_test/<operation>/<case>/
 script/setup_runpod.sh
+script/setup_mmlab.sh          lab machine; conda already installed
 script/download_prior_test_data.py
 output/gradio/                  one folder per Gradio run
 output/batch/                   one tree per model and batch run
@@ -45,6 +46,17 @@ conda activate flux2-klein
 Prior_test download needs `resource/flux2_klein_60_cases.json` in the checkout. Commit that file before cloning the repo on the pod. VIBE_test is already in git.
 
 Re-running the script skips work that is already done. Useful flags: `--skip-conda`, `--skip-models`, `--skip-data`.
+
+On a lab machine that already has conda, use `script/setup_mmlab.sh` instead. It does not download Miniconda. It creates the `flux2-klein` env with the conda already on the machine, then installs the same PyTorch wheel, Python deps, checkpoints, and Prior_test images. Set `HF_HOME` in `.env` to a directory on that machine before running it. The script ignores `CONDA_DIR`.
+
+```bash
+cp .env.example .env
+# set HF_HOME to a local disk path; optional: set HF_TOKEN
+bash script/setup_mmlab.sh
+conda activate flux2-klein
+```
+
+It finds conda on `PATH`, then via `CONDA_EXE`, then under the usual prefixes (`~/miniconda3`, `~/anaconda3`, `~/miniforge3`, `/opt/conda`). Flags: `--skip-env`, `--skip-models`, `--skip-data`.
 
 ## Gradio
 
