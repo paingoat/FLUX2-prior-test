@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiểm tra Prior test</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Kiểm tra Prior test</h1>
+      <p id="summary">Đang tải…</p>
+    </div>
+    <div class="bar">
+      <div class="filters">
+        <div class="filter-row">
+          <span class="label">Thao tác</span>
+          <div id="ops" class="chips"></div>
+        </div>
+        <div class="filter-row">
+          <span class="label" id="case-label">Case</span>
+          <div id="cases" class="chips"></div>
+        </div>
+        <div class="filter-row">
+          <span class="label">Trạng thái</span>
+          <div class="chips">
+            <button type="button" class="chip on" data-status="" aria-pressed="true">Tất cả</button>
+            <button type="button" class="chip" data-status="complete" aria-pressed="false">Đủ ảnh</button>
+            <button type="button" class="chip" data-status="missing" aria-pressed="false">Thiếu file</button>
+          </div>
+          <input id="search" type="search" placeholder="Tìm id hoặc prompt" aria-label="Tìm id hoặc prompt" />
+        </div>
+      </div>
+      <button id="reload" type="button">Tải lại</button>
+    </div>
+    <p id="context" hidden></p>
+  </header>
+  <details id="warnings" hidden></details>
+  <main id="grid"></main>
+  <nav id="pager" hidden></nav>
+  <div id="viewer" class="modal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+      <div class="sheet-head">
+        <div>
+          <p id="viewer-kicker"></p>
+          <h2 id="viewer-title"></h2>
+        </div>
+        <button id="viewer-close" type="button">Đóng</button>
+      </div>
+      <p id="viewer-prompt"></p>
+      <p id="viewer-error" hidden></p>
+      <div class="sheet-nav">
+        <button id="viewer-prev" type="button">Trước</button>
+        <span id="viewer-pos"></span>
+        <button id="viewer-next" type="button">Sau</button>
+      </div>
+      <div class="pair">
+        <div class="pane">
+          <p class="pane-label">Input</p>
+          <div id="viewer-input" class="frame"></div>
+        </div>
+        <div class="pane">
+          <p class="pane-label">Ground truth</p>
+          <div id="viewer-output" class="frame"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

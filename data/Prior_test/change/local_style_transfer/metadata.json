@@ -1,0 +1,45 @@
+{
+  "operation": "CHANGE",
+  "edit_type": "Convert person to Pixar/Disney-like 3D cartoon look",
+  "case": "Local Style Transfer",
+  "case_file": "local_style_transfer",
+  "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Transform the person on the inflatable tube into a vibrant, 3D Pixar/Disney-style cartoon character with smooth, stylized features, soft, diffused lighting, and clean, almost plastic-like textures, ensuring the surrounding river, tube, and iPod display retain their original realistic appearance and lighting.",
+      "image": "images/input_284489.png",
+      "ground_truth": "ground_truth/output_284489.png",
+      "open_image_input_url": "https://c6.staticflickr.com/3/2654/3906853130_2b82a3eef8_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/284489.png"
+    },
+    {
+      "text": "Transform the silhouetted person in the foreground into a classic LEGO minifigure, precisely replicating its pose and distinctive hand gesture, while preserving the deep shadow and warm rim lighting that defines its silhouette against the unchanged, realistic backdrop of the sleeping dog on the grassy lawn.",
+      "image": "images/input_kew86s.png",
+      "ground_truth": "ground_truth/output_kew86s.png",
+      "open_image_input_url": "https://c1.staticflickr.com/6/5616/15648395039_e730001a3e_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kew86s_retry2.png"
+    },
+    {
+      "text": "Transform only the person in the image into a detailed 2D anime/manga style, preserving his identity with recognizable facial features, hairstyle, and pose, using bold, clean linework, vibrant flat colors with distinct cel-shading for highlights and shadows, stylized expressive eyes that retain his original eye color, and simplified clothing textures, while leaving the background, food, and surrounding environment completely untouched in their original photographic realism to create a striking stylistic contrast.",
+      "image": "images/input_kevox7.png",
+      "ground_truth": "ground_truth/output_kevox7.png",
+      "open_image_input_url": "https://c2.staticflickr.com/8/7685/16917959937_4c95e3ef88_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kevox7_retry1.png"
+    },
+    {
+      "text": "Convert only the person in the image to a distinct Western comic cel-shaded style by applying bold, clean black outlines, filling areas with flat, uniform colors (e.g., vibrant blues, reds, yellows, or greens for clothing and a natural skin tone), simplifying facial features and hair into graphic shapes, and adding sharp, high-contrast shadows and highlights without gradients to mimic traditional comic book art, while keeping the rest of the image, including the dog and background, in its original photographic black-and-white style.",
+      "image": "images/input_kevsn4.png",
+      "ground_truth": "ground_truth/output_kevsn4.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/484/18904037150_95fce7e8d7_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kevsn4_retry1.png"
+    },
+    {
+      "text": "Convert only the foreground person into a monochrome black ink line drawing with white fill, featuring crisp outlines and minimal shading to retain facial features, while preserving the original vibrant colors, lighting, and realistic details of the background scene.",
+      "image": "images/input_300210.png",
+      "ground_truth": "ground_truth/output_300210.png",
+      "open_image_input_url": "https://farm5.staticflickr.com/3791/9444834711_4b3fa65c1a_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/300210.png"
+    }
+  ]
+}

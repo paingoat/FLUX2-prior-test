@@ -1,0 +1,45 @@
+{
+  "operation": "REMOVE",
+  "edit_type": "Remove an existing object",
+  "case": "Multi-Object Scene",
+  "case_file": "multi_object_scene",
+  "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Remove the man in the green military fatigues and dark cap standing to the left of the main subjects, next to the open airplane door, ensuring the background is seamlessly infilled with the metallic texture and white/grey surface of the aircraft fuselage and the concrete ground, maintaining consistent lighting and shadow.",
+      "image": "images/input_kf1ihk.png",
+      "ground_truth": "ground_truth/output_kf1ihk.png",
+      "open_image_input_url": "https://c5.staticflickr.com/4/3712/9447342281_15fda0a519_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1ihk_retry1.png"
+    },
+    {
+      "text": "Seamlessly remove the standing carved figure located in the upper row, second from the left, ensuring the background is filled with the matching ancient, weathered stone texture and color, while preserving the natural lighting and intricate carving style of the surrounding temple wall.",
+      "image": "images/input_227415.png",
+      "ground_truth": "ground_truth/output_227415.png",
+      "open_image_input_url": "https://farm2.staticflickr.com/7386/16400716655_d892ff00d8_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/227415.png"
+    },
+    {
+      "text": "Remove the person wearing the yellow safety vest standing between the two cars, seamlessly filling the empty space with the continuation of the asphalt road texture, the green grassy field, and the distant trees, ensuring the lighting and color balance naturally with the surrounding environment.",
+      "image": "images/input_44976.png",
+      "ground_truth": "ground_truth/output_44976.png",
+      "open_image_input_url": "https://farm4.staticflickr.com/3689/9591670076_343b0421b0_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/44976.png"
+    },
+    {
+      "text": "Remove the second, partially visible butterfly in the lower-right section of the image, seamlessly extending the vibrant green leaf and its natural texture underneath to maintain the original lighting and focus on the single resting butterfly.",
+      "image": "images/input_52363.png",
+      "ground_truth": "ground_truth/output_52363.png",
+      "open_image_input_url": "https://farm3.staticflickr.com/8716/17527323592_4d330796eb_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/52363.png"
+    },
+    {
+      "text": "Seamlessly remove the soccer player wearing the orange jersey with the number '1' on her back, positioned in the foreground of the image, and intelligently fill the resulting space with the artificial green turf, ensuring the texture, color, and white field lines are extended naturally to maintain a consistent and realistic appearance of the soccer field.",
+      "image": "images/input_75054.png",
+      "ground_truth": "ground_truth/output_75054.png",
+      "open_image_input_url": "https://farm1.staticflickr.com/8732/16845537628_b2d87992ab_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/75054.png"
+    }
+  ]
+}

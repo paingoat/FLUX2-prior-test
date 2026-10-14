@@ -1,0 +1,45 @@
+{
+  "operation": "REMOVE",
+  "edit_type": "Remove an existing object",
+  "case": "Single-Object Scene",
+  "case_file": "single_object_scene",
+  "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Remove the single heart-shaped red cherry from the light gray surface, seamlessly filling the empty space with the existing light gray textured surface and maintaining the original lighting and subtle reflections to create a natural and untouched appearance.",
+      "image": "images/input_39818.png",
+      "ground_truth": "ground_truth/output_39818.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/5195/14325884481_cdf7f282e2_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/39818.png"
+    },
+    {
+      "text": "Remove the prominent yellow five-armed starfish from the center of the image, seamlessly infilling the area with the surrounding textured, greyish-brown rocky substrate, meticulously matching its granular texture, subtle color variations, and existing lighting to ensure a natural and undetectable edit while preserving the nearby white sponge-like organism.",
+      "image": "images/input_264600.png",
+      "ground_truth": "ground_truth/output_264600.png",
+      "open_image_input_url": "https://c7.staticflickr.com/6/5153/14502031541_9312cab479_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/264600.png"
+    },
+    {
+      "text": "Seamlessly remove the large, brown, gelatinous object (jellyfish) from the sandy foreground, ensuring the newly exposed beach area perfectly matches the surrounding sand's texture, granular detail, and subtle light reflections from the sunset, maintaining a natural and undisturbed transition to the ocean and horizon.",
+      "image": "images/input_193816.png",
+      "ground_truth": "ground_truth/output_193816.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/5317/5818263324_bd1677d247_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/193816.png"
+    },
+    {
+      "text": "Remove the large, derelict wooden boat from the foreground, seamlessly replacing the area it occupies with lush green grass that matches the existing lawn's texture, color, and overcast lighting, while naturally extending the stone wall, road, and distant buildings to complete the background composition.",
+      "image": "images/input_64976.png",
+      "ground_truth": "ground_truth/output_64976.png",
+      "open_image_input_url": "https://c5.staticflickr.com/8/7543/15627882204_de6c08b462_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/64976.png"
+    },
+    {
+      "text": "Remove the prominent, shaggy-haired, light-brown Highland cow from the center of the sandy beach, seamlessly infilling the vacated space with the existing textures of light-colored sand, scattered dark seaweed, and small pebbles, while extending the calm grey-blue ocean, distant rocky islands, and overcast sky to maintain the original natural coastal landscape and soft lighting.",
+      "image": "images/input_197685.png",
+      "ground_truth": "ground_truth/output_197685.png",
+      "open_image_input_url": "https://c1.staticflickr.com/1/26/42648534_36e8216f31_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/197685.png"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "operation": "CHANGE",
+  "edit_type": "Change an object's attribute (e.g., color/material)",
+  "case": "Material Change",
+  "case_file": "material_change",
+  "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Change the material of the building's wooden siding to a sleek, dark charcoal gray metal cladding with a subtle matte finish, ensuring the existing shadows from the tree and the overall lighting are realistically maintained on the new surface.",
+      "image": "images/input_167464.png",
+      "ground_truth": "ground_truth/output_167464.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/2846/8854865440_2c583c44e3_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/167464.png"
+    },
+    {
+      "text": "Change the wooden wall in all four panels to a dark, weathered red brick texture, ensuring the existing posters, murals, and artists are seamlessly integrated with appropriate shadows and lighting for a realistic appearance.",
+      "image": "images/input_108811.png",
+      "ground_truth": "ground_truth/output_108811.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/5477/9318975908_231b4fb76d_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/108811.png"
+    },
+    {
+      "text": "Change the material of the large wooden wall paneling to a dark, brushed metal finish with a subtle sheen, ensuring that the existing light reflections and shadows are realistically adapted to the new texture.",
+      "image": "images/input_141104.png",
+      "ground_truth": "ground_truth/output_141104.png",
+      "open_image_input_url": "https://c7.staticflickr.com/1/404/18902122386_0a46963ab8_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/141104.png"
+    },
+    {
+      "text": "Change the material of the large castle structure from its current reddish-brown brick to a lighter, more weathered grey stone, ensuring the new texture seamlessly integrates with the existing lighting and shadows to maintain a realistic appearance.",
+      "image": "images/input_kf2rcu.png",
+      "ground_truth": "ground_truth/output_kf2rcu.png",
+      "open_image_input_url": "https://c5.staticflickr.com/6/5594/14602146978_d8f5015c42_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf2rcu_retry1.png"
+    },
+    {
+      "text": "Change the material of all visible seat covers from their current light brown fabric to a deep, rich burgundy velvet, ensuring the new texture realistically interacts with the existing ambient lighting and shadow details within the train car.",
+      "image": "images/input_176717.png",
+      "ground_truth": "ground_truth/output_176717.png",
+      "open_image_input_url": "https://c3.staticflickr.com/4/3898/14750060747_c86d1963d7_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/176717.png"
+    }
+  ]
+}

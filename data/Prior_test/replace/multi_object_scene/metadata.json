@@ -1,0 +1,45 @@
+{
+  "operation": "REPLACE",
+  "edit_type": "Replace one object category with another",
+  "case": "Multi-Object Scene",
+  "case_file": "multi_object_scene",
+  "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Replace the protest sign in the center of the image with a modern, slim LED digital display screen showing the text 'CLIMATE ACTION NOW' in a bold, sans-serif font with vibrant green letters against a dark blue background, ensuring the screen's brightness, reflections, and perspective realistically match the outdoor protest environment.",
+      "image": "images/input_196584.png",
+      "ground_truth": "ground_truth/output_196584.png",
+      "open_image_input_url": "https://c6.staticflickr.com/7/6217/6245949553_4427f866a3_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/196584.png"
+    },
+    {
+      "text": "Replace the telescope on the tripod next to the window with a tall, leafy indoor potted plant, ensuring the plant has vibrant green foliage and a natural-toned pot, is illuminated by the soft light from the window, and seamlessly blends into the existing room decor.",
+      "image": "images/input_119389.png",
+      "ground_truth": "ground_truth/output_119389.png",
+      "open_image_input_url": "https://farm6.staticflickr.com/267/18458407285_711f19a793_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/119389.png"
+    },
+    {
+      "text": "Replace the American flag to the left of the podium with a plain blue corporate flag featuring a simple white circular logo in the center, ensuring the new flag realistically drapes and reflects the ambient light and shadows of the scene while keeping the golden eagle finial on the flagpole.",
+      "image": "images/input_4880.png",
+      "ground_truth": "ground_truth/output_4880.png",
+      "open_image_input_url": "https://farm5.staticflickr.com/7255/7740184378_d1ca996e4f_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/4880.png"
+    },
+    {
+      "text": "Replace the silver metal bottle with a straw that the woman on the right is holding with a vintage-style black wired microphone, ensuring it has a metallic grille and a natural shadow cast on her hand, reflecting the existing soft, warm indoor lighting, and ensure her grip looks natural around the microphone, maintaining the original pose and eye contact.",
+      "image": "images/input_177645.png",
+      "ground_truth": "ground_truth/output_177645.png",
+      "open_image_input_url": "https://farm4.staticflickr.com/1025/1434410227_10888c6bdd_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/177645.png"
+    },
+    {
+      "text": "Replace the leftmost white mug, featuring a yellow figure, with a vintage-style porcelain teapot with a delicate blue floral pattern, ensuring it is proportionally scaled to the other items and casts natural shadows onto the wooden surface, while maintaining the soft, ambient lighting of the scene.",
+      "image": "images/input_173504.png",
+      "ground_truth": "ground_truth/output_173504.png",
+      "open_image_input_url": "https://farm5.staticflickr.com/2247/2188378275_d0e03312a1_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/173504.png"
+    }
+  ]
+}

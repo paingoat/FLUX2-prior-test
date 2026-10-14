@@ -1,0 +1,45 @@
+{
+  "operation": "ADD",
+  "edit_type": "Add a new object to the scene",
+  "case": "Object Cloning",
+  "case_file": "object_cloning",
+  "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Integrate a second, identical black leather cap-toe oxford shoe into the scene, placing it slightly behind and to the left of the existing shoe, ensuring consistent bright studio lighting, realistic reflections, and a subtle shadow on the white background to form a natural pair.",
+      "image": "images/input_271920.png",
+      "ground_truth": "ground_truth/output_271920.png",
+      "open_image_input_url": "https://farm4.staticflickr.com/557/19667984466_8391d33b8f_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/271920.png"
+    },
+    {
+      "text": "Add a second rugby ball, identical in design and coloring to the one the player is holding, positioned on the grass in the mid-ground to the left of the player, ensuring it has a slight, soft shadow consistent with the bright, diffused daylight of the scene.",
+      "image": "images/input_kf1teg.png",
+      "ground_truth": "ground_truth/output_kf1teg.png",
+      "open_image_input_url": "https://c8.staticflickr.com/1/200/467750174_a6b60a9150_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1teg_retry2.png"
+    },
+    {
+      "text": "Add a second ornate black metal park bench with wooden slats, similar in style and material to the existing one, positioned on the brick path slightly to the left and closer to the foreground bushes, ensuring its lighting and shadows are consistent with the bright, sunny afternoon light on the existing bench and surrounding environment.",
+      "image": "images/input_262945.png",
+      "ground_truth": "ground_truth/output_262945.png",
+      "open_image_input_url": "https://farm2.staticflickr.com/7043/6796512132_5f5dd4fa0e_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/262945.png"
+    },
+    {
+      "text": "Add a second, identical yellow water polo ball floating naturally in the water, slightly submerged to the left of the player's hand, ensuring it has similar lighting reflections and water ripples as the existing ball.",
+      "image": "images/input_246292.png",
+      "ground_truth": "ground_truth/output_246292.png",
+      "open_image_input_url": "https://c5.staticflickr.com/6/5608/15205181993_b9c060d1a7_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/246292.png"
+    },
+    {
+      "text": "Add a second, slightly smaller and riper pomegranate, displaying richer red hues with subtle yellow-green patches, hanging from a branch to the upper left of the existing pomegranate, partially obscured by the lush green leaves, and illuminated by the same natural, bright sunlight to seamlessly integrate with the scene's depth and realism.",
+      "image": "images/input_197741.png",
+      "ground_truth": "ground_truth/output_197741.png",
+      "open_image_input_url": "https://c8.staticflickr.com/1/516/20256678249_f236f4a8f5_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/197741.png"
+    }
+  ]
+}

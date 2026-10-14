@@ -1,0 +1,45 @@
+{
+  "operation": "CHANGE",
+  "edit_type": "Change an object's attribute (e.g., color/material)",
+  "case": "Color Change",
+  "case_file": "color_change",
+  "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Change the color of the red polo shirt worn by the girl to a vibrant royal blue, ensuring the fabric texture, natural folds, and the interplay of light and shadow are realistically maintained to seamlessly integrate with the existing scene.",
+      "image": "images/input_kf3etr.png",
+      "ground_truth": "ground_truth/output_kf3etr.png",
+      "open_image_input_url": "https://farm8.staticflickr.com/8604/16770486511_d560471507_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf3etr_retry1.png"
+    },
+    {
+      "text": "Change the bright orange jacket worn by the person on the left to a rich, deep forest green, ensuring the new color accurately reflects the natural sunlight and shadows present in the scene and maintains the jacket's original fabric texture.",
+      "image": "images/input_166997.png",
+      "ground_truth": "ground_truth/output_166997.png",
+      "open_image_input_url": "https://farm4.staticflickr.com/8630/16704422676_cde53b614e_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/166997.png"
+    },
+    {
+      "text": "Change the bicycle frame's color from its current dark grey to a vibrant, glossy 'Electric Blue', ensuring the new finish realistically reflects light and preserves the existing shadows and highlights of the frame's carbon fiber texture.",
+      "image": "images/input_kf1d68.png",
+      "ground_truth": "ground_truth/output_kf1d68.png",
+      "open_image_input_url": "https://c5.staticflickr.com/8/7465/15901343556_360756ee78_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1d68_retry1.png"
+    },
+    {
+      "text": "Change the color of the man's black fleece jacket to a vibrant crimson red, ensuring the fleece texture, existing shadows, and highlights are realistically maintained for a natural appearance.",
+      "image": "images/input_kezxer.png",
+      "ground_truth": "ground_truth/output_kezxer.png",
+      "open_image_input_url": "https://c2.staticflickr.com/2/1341/3269662397_fc0afae96f_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kezxer_retry1.png"
+    },
+    {
+      "text": "Change the color of the red car to a deep metallic blue, ensuring the paint reflects the surrounding environment and light conditions realistically, while maintaining its original sheen and shadow details.",
+      "image": "images/input_85630.png",
+      "ground_truth": "ground_truth/output_85630.png",
+      "open_image_input_url": "https://c6.staticflickr.com/3/2881/13581417985_5720f12e97_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/85630.png"
+    }
+  ]
+}

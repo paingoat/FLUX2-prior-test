@@ -1,0 +1,45 @@
+{
+  "operation": "REPLACE",
+  "edit_type": "Replace one object category with another",
+  "case": "Single-Object Scene",
+  "case_file": "single_object_scene",
+  "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Replace the brown lizard on the mossy log with a small, camouflaged green tree frog, ensuring its skin texture appears slightly moist and bumpy, its body is positioned naturally on the log similar to the original lizard, and the natural lighting and blurred green forest background are seamlessly integrated to maintain realism.",
+      "image": "images/input_149747.png",
+      "ground_truth": "ground_truth/output_149747.png",
+      "open_image_input_url": "https://c1.staticflickr.com/9/8177/7984020841_c69fee78d4_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/149747.png"
+    },
+    {
+      "text": "Replace the entire old-fashioned telephone booth with a sleek, minimalist, modern digital information kiosk, ensuring the new object is rendered in black and white, maintains the existing dark, low-light, urban street ambiance, and the original perspective, with a subtly glowing screen displaying a monochrome interface.",
+      "image": "images/input_39623.png",
+      "ground_truth": "ground_truth/output_39623.png",
+      "open_image_input_url": "https://c5.staticflickr.com/1/261/19636529902_293fd70ec6_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/39623.png"
+    },
+    {
+      "text": "Replace the entire vintage blue pickup truck with a pristine, glossy black 1957 Chevrolet Bel Air, ensuring the new vehicle matches the bright, sunny lighting conditions, casts accurate shadows on the dusty ground, and reflects the surrounding green foliage realistically on its polished surfaces, while maintaining the original perspective and composition.",
+      "image": "images/input_228863.png",
+      "ground_truth": "ground_truth/output_228863.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/5331/10025363663_ec4321fb4a_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/228863.png"
+    },
+    {
+      "text": "Replace the large, fluffy, light-colored plush alpaca with a realistic-looking, medium-sized, light ginger cat, ensuring its fur is detailed and soft, its emerald green eyes are bright, and it maintains the same embracing pose with the doll, all while preserving the soft, natural lighting and shallow depth of field of the original image.",
+      "image": "images/input_229513.png",
+      "ground_truth": "ground_truth/output_229513.png",
+      "open_image_input_url": "https://farm3.staticflickr.com/2890/11953402936_7ebbf62e5f_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/229513.png"
+    },
+    {
+      "text": "Replace the large metal fabric scissors with a modern rotary cutter, ensuring its plastic handle and sharp circular blade match the existing bright lighting and reflections, and position it realistically on the marked paper and fabric as if ready to cut along the blue line, maintaining the original image's composition and realism.",
+      "image": "images/input_187670.png",
+      "ground_truth": "ground_truth/output_187670.png",
+      "open_image_input_url": "https://c1.staticflickr.com/9/8481/8228190127_769355daf6_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/187670.png"
+    }
+  ]
+}

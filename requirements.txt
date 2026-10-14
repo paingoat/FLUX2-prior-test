@@ -1,0 +1,14 @@
+# torch and torchvision are installed separately from the CUDA 12.8 index
+# (see script/setup_runpod.sh). Do not add them here: a default PyPI wheel
+# does not include sm_120 kernels for an RTX 5090.
+diffusers>=0.37.0
+transformers>=4.56.0
+accelerate>=1.12.0
+safetensors>=0.4.5
+gradio>=5.0.0
+pillow>=10.0.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+huggingface_hub[cli]>=0.30.0
+hf_transfer>=0.1.8
+hf_xet>=1.1.0

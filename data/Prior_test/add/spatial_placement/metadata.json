@@ -1,0 +1,45 @@
+{
+  "operation": "ADD",
+  "edit_type": "Add a new object to the scene",
+  "case": "Spatial Placement",
+  "case_file": "spatial_placement",
+  "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Integrate a solitary figure walking away from the camera on the snow-covered bank to the left of the wooden post, dressed in a dark winter coat and hat, with subtle footprints trailing behind them in the fresh snow, ensuring the soft, diffused lighting and shadows are consistent with the overcast winter scene.",
+      "image": "images/input_43028.png",
+      "ground_truth": "ground_truth/output_43028.png",
+      "open_image_input_url": "https://c1.staticflickr.com/6/5293/5531390260_010976ffe3_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/43028.png"
+    },
+    {
+      "text": "Integrate a vintage-style basketball, with a worn leather texture and classic orange-brown color, into the scene by placing it to the left of the sneakers and slightly behind them, ensuring it casts a subtle, realistic shadow consistent with the existing lighting and is partially obscured by the left sneaker to blend naturally into the composition while maintaining the image's warm, slightly desaturated aesthetic.",
+      "image": "images/input_203275.png",
+      "ground_truth": "ground_truth/output_203275.png",
+      "open_image_input_url": "https://c5.staticflickr.com/9/8390/8641569933_6ba046325d_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/203275.png"
+    },
+    {
+      "text": "Integrate a sleek, open silver laptop onto the wooden conference table, positioned to the right of the existing glass of water, displaying a subtle, professional-looking chart or graph on its screen, ensuring the screen's luminosity and reflections are consistent with the ambient room lighting and the laptop's surface texture realistically reflects the surrounding environment.",
+      "image": "images/input_257545.png",
+      "ground_truth": "ground_truth/output_257545.png",
+      "open_image_input_url": "https://c2.staticflickr.com/1/692/21839104765_f14f742a0d_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/257545.png"
+    },
+    {
+      "text": "Add a bright orange traffic cone, slightly weathered and dirty, to the sidewalk directly to the left of the damaged green car's front wheel, ensuring its shadows are consistent with the ambient lighting and its base is firmly on the ground.",
+      "image": "images/input_201736.png",
+      "ground_truth": "ground_truth/output_201736.png",
+      "open_image_input_url": "https://farm3.staticflickr.com/8104/8646124305_78806e78f1_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/201736.png"
+    },
+    {
+      "text": "Introduce a vibrant, yellow, chew-resistant rubber dog toy shaped like a ball, positioned on the speckled floor slightly to the left of the black dog's front paws, ensuring it casts a soft, realistic shadow consistent with the overhead lighting and exhibits a subtle matte texture.",
+      "image": "images/input_74626.png",
+      "ground_truth": "ground_truth/output_74626.png",
+      "open_image_input_url": "https://c8.staticflickr.com/6/5608/15525079697_d80ef0b768_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/74626.png"
+    }
+  ]
+}

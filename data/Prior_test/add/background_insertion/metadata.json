@@ -1,0 +1,45 @@
+{
+  "operation": "ADD",
+  "edit_type": "Add a new object to the scene",
+  "case": "Background Insertion",
+  "case_file": "background_insertion",
+  "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+  "count": 5,
+  "samples": [
+    {
+      "text": "Integrate a solitary, dark green canoe made of weathered wood, subtly reflecting on the calm water in the mid-left section of the lake, ensuring its lighting matches the bright, clear daylight of the scene.",
+      "image": "images/input_28821.png",
+      "ground_truth": "ground_truth/output_28821.png",
+      "open_image_input_url": "https://farm7.staticflickr.com/8388/8590025416_9836bc771b_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/28821.png"
+    },
+    {
+      "text": "Integrate a rustic, weathered wooden signpost, approximately 3 feet tall and a faded dark brown color, with a rough texture, into the lower-right portion of the grassy field, ensuring it casts a subtle, soft shadow consistent with the bright, natural daylight illuminating the scene.",
+      "image": "images/input_34747.png",
+      "ground_truth": "ground_truth/output_34747.png",
+      "open_image_input_url": "https://farm3.staticflickr.com/2943/15138383208_f4de7fa54b_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/34747.png"
+    },
+    {
+      "text": "Integrate a small, rustic wooden cabin with a dark gray roof and a wisp of smoke gently rising from its stone chimney, nestled subtly into the colorful autumn foliage on the lower right mountain slope, ensuring its lighting and shadows are consistent with the bright, sunny conditions of the scene.",
+      "image": "images/input_246644.png",
+      "ground_truth": "ground_truth/output_246644.png",
+      "open_image_input_url": "https://c5.staticflickr.com/4/3141/4085705077_6f49d34d4f_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/246644.png"
+    },
+    {
+      "text": "Add a prominent, slightly crescent-shaped moon with a soft, ethereal glow to the upper right quadrant of the dark blue sky, ensuring its light realistically illuminates the surrounding atmosphere and casts a subtle, gentle shimmer on the distant silhouetted landscape, maintaining the serene twilight ambiance.",
+      "image": "images/input_kf05yx.png",
+      "ground_truth": "ground_truth/output_kf05yx.png",
+      "open_image_input_url": "https://c4.staticflickr.com/9/8683/15882162678_22f2fa6691_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf05yx_retry1.png"
+    },
+    {
+      "text": "Introduce a small, rustic wooden cabin nestled among the bare trees on the upper left side of the frame, illuminated by a faint, warm interior glow from a single window, contrasting softly with the cold blue twilight and casting subtle shadows on the surrounding snow.",
+      "image": "images/input_156159.png",
+      "ground_truth": "ground_truth/output_156159.png",
+      "open_image_input_url": "https://c3.staticflickr.com/9/8585/16621771936_2302e6888b_o.jpg",
+      "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/156159.png"
+    }
+  ]
+}

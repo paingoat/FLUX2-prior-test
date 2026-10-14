@@ -1,6 +1,6 @@
 """Download Prior_test input/ground-truth images and write per-case metadata.
 
-Source: resource/flux2_klein_60_cases_named.json
+Source: resource/flux2_klein_60_cases.json
 Layout:  data/Prior_test/<operation>/<case_file>/{images,ground_truth,metadata.json}
 
 Each pair keeps the output_image stem, with a role prefix:
@@ -22,7 +22,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_JSON = ROOT / "resource" / "flux2_klein_60_cases_named.json"
+DEFAULT_JSON = ROOT / "resource" / "flux2_klein_60_cases.json"
 DEFAULT_OUT = ROOT / "data" / "Prior_test"
 
 MAX_ATTEMPTS = 3
@@ -47,6 +47,10 @@ def source_filename(url: str) -> str:
 
 def named_file(source_name: str, prefix: str) -> str:
     return f"{prefix}_{source_name}"
+
+
+def is_downloaded(dest: Path) -> bool:
+    return dest.is_file() and dest.stat().st_size > 0
 
 
 def download(url: str, dest: Path, attempts: int = MAX_ATTEMPTS) -> None:
@@ -142,9 +146,21 @@ def main() -> int:
             jobs.append((sample["output_image"], case_dir / "ground_truth" / named_file(source_name, "output")))
 
     total = len(jobs)
-    done = 0
+    present = 0 if args.force else sum(1 for _, dest in jobs if is_downloaded(dest))
+    missing = total - present
+    print(f"Done: {present}/{total} anh da co tren local, khong tai lai.")
+    if missing == 0:
+        print("Khong co anh nao can tai.")
+    else:
+        print(f"Chi tai {missing} anh con thieu:")
+        for _, dest in jobs:
+            if args.force or not is_downloaded(dest):
+                print(f"- {dest.relative_to(args.out)}")
+
+    done = present
     failures: list[dict] = []
-    render_progress(0, total, "bat dau")
+    if missing:
+        render_progress(done, total, "da co san")
 
     for operation, case_file, samples in plan:
         case_dir = args.out / operation / case_file
@@ -164,9 +180,7 @@ def main() -> int:
 
             for kind, url, dest, saved_name in targets:
                 label = f"{operation}/{case_file}/{kind}/{saved_name}"
-                if dest.exists() and dest.stat().st_size > 0 and not args.force:
-                    done += 1
-                    render_progress(done, total, f"bo qua {label}")
+                if is_downloaded(dest) and not args.force:
                     continue
                 try:
                     download(url, dest, attempts=args.attempts)
