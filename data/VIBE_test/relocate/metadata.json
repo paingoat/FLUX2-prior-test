@@ -1,0 +1,44 @@
+{
+  "task": "relocate",
+  "image_field": "image",
+  "prompt_field": "prompt",
+  "note": "PNG is source image plus visual cue only. Prompt is text and is not drawn on the image.",
+  "count": 5,
+  "samples": [
+    {
+      "id": "tr_001",
+      "image": "images/tr_001.png",
+      "prompt": "Relocate the glasses highlighted by the red outline to the spot pointed to by the red arrow.",
+      "source_id": "Translation_0001",
+      "index": 1
+    },
+    {
+      "id": "tr_002",
+      "image": "images/tr_002.png",
+      "prompt": "Relocate the apple highlighted by the red outline to the spot pointed to by the red arrow.",
+      "source_id": "Translation_0009",
+      "index": 9
+    },
+    {
+      "id": "tr_003",
+      "image": "images/tr_003.png",
+      "prompt": "Relocate the scissors highlighted by the red outline to the spot pointed to by the red arrow.",
+      "source_id": "Translation_0015",
+      "index": 15
+    },
+    {
+      "id": "tr_004",
+      "image": "images/tr_004.png",
+      "prompt": "Relocate the bear highlighted by the red outline to the spot pointed to by the red arrow.",
+      "source_id": "Translation_0043",
+      "index": 43
+    },
+    {
+      "id": "tr_005",
+      "image": "images/tr_005.png",
+      "prompt": "Relocate the poster highlighted by the red outline to the spot pointed to by the red arrow.",
+      "source_id": "Translation_0090",
+      "index": 90
+    }
+  ]
+}

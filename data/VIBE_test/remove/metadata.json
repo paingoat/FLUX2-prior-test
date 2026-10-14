@@ -1,0 +1,44 @@
+{
+  "task": "remove",
+  "image_field": "image",
+  "prompt_field": "prompt",
+  "note": "PNG is source image plus visual cue only. Prompt is text and is not drawn on the image.",
+  "count": 5,
+  "samples": [
+    {
+      "id": "rem_001",
+      "image": "images/rem_001.png",
+      "prompt": "Remove all the objects in the red circle.",
+      "source_id": "Removal_0001",
+      "index": 1
+    },
+    {
+      "id": "rem_002",
+      "image": "images/rem_002.png",
+      "prompt": "Remove all the objects in the red circle.",
+      "source_id": "Removal_0015",
+      "index": 15
+    },
+    {
+      "id": "rem_003",
+      "image": "images/rem_003.png",
+      "prompt": "Remove all the objects in the red circle.",
+      "source_id": "Removal_0022",
+      "index": 22
+    },
+    {
+      "id": "rem_004",
+      "image": "images/rem_004.png",
+      "prompt": "Remove all the objects in the red circle.",
+      "source_id": "Removal_0098",
+      "index": 98
+    },
+    {
+      "id": "rem_005",
+      "image": "images/rem_005.png",
+      "prompt": "Remove all the objects in the red circle.",
+      "source_id": "Removal_0093",
+      "index": 93
+    }
+  ]
+}

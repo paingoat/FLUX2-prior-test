@@ -1,0 +1,44 @@
+{
+  "task": "replace",
+  "image_field": "image",
+  "prompt_field": "prompt",
+  "note": "PNG is source image plus visual cue only. Prompt is text and is not drawn on the image.",
+  "count": 5,
+  "samples": [
+    {
+      "id": "rep_001",
+      "image": "images/rep_001.png",
+      "prompt": "Replace the red circle with coffee cup.",
+      "source_id": "Replacement_0004",
+      "index": 4
+    },
+    {
+      "id": "rep_002",
+      "image": "images/rep_002.png",
+      "prompt": "Replace the red circle with a laptop.",
+      "source_id": "Replacement_0023",
+      "index": 23
+    },
+    {
+      "id": "rep_003",
+      "image": "images/rep_003.png",
+      "prompt": "Replace the red circle with a bottle of Coca-Cola.",
+      "source_id": "Replacement_0034",
+      "index": 34
+    },
+    {
+      "id": "rep_004",
+      "image": "images/rep_004.png",
+      "prompt": "Replace the red circle with a landline phone.",
+      "source_id": "Replacement_0097",
+      "index": 97
+    },
+    {
+      "id": "rep_005",
+      "image": "images/rep_005.png",
+      "prompt": "Replace the red circle with a calculator.",
+      "source_id": "Replacement_0079",
+      "index": 79
+    }
+  ]
+}
