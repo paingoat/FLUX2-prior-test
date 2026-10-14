@@ -1,0 +1,602 @@
+[
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Background Insertion",
+    "text": "Integrate a solitary, dark green canoe made of weathered wood, subtly reflecting on the calm water in the mid-left section of the lake, ensuring its lighting matches the bright, clear daylight of the scene.",
+    "open_image_input_url": "https://farm7.staticflickr.com/8388/8590025416_9836bc771b_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/28821.png",
+    "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+    "case_file": "background_insertion"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Background Insertion",
+    "text": "Integrate a rustic, weathered wooden signpost, approximately 3 feet tall and a faded dark brown color, with a rough texture, into the lower-right portion of the grassy field, ensuring it casts a subtle, soft shadow consistent with the bright, natural daylight illuminating the scene.",
+    "open_image_input_url": "https://farm3.staticflickr.com/2943/15138383208_f4de7fa54b_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/34747.png",
+    "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+    "case_file": "background_insertion"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Background Insertion",
+    "text": "Integrate a small, rustic wooden cabin with a dark gray roof and a wisp of smoke gently rising from its stone chimney, nestled subtly into the colorful autumn foliage on the lower right mountain slope, ensuring its lighting and shadows are consistent with the bright, sunny conditions of the scene.",
+    "open_image_input_url": "https://c5.staticflickr.com/4/3141/4085705077_6f49d34d4f_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/246644.png",
+    "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+    "case_file": "background_insertion"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Background Insertion",
+    "text": "Add a prominent, slightly crescent-shaped moon with a soft, ethereal glow to the upper right quadrant of the dark blue sky, ensuring its light realistically illuminates the surrounding atmosphere and casts a subtle, gentle shimmer on the distant silhouetted landscape, maintaining the serene twilight ambiance.",
+    "open_image_input_url": "https://c4.staticflickr.com/9/8683/15882162678_22f2fa6691_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf05yx_retry1.png",
+    "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+    "case_file": "background_insertion"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Background Insertion",
+    "text": "Introduce a small, rustic wooden cabin nestled among the bare trees on the upper left side of the frame, illuminated by a faint, warm interior glow from a single window, contrasting softly with the cold blue twilight and casting subtle shadows on the surrounding snow.",
+    "open_image_input_url": "https://c3.staticflickr.com/9/8585/16621771936_2302e6888b_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/156159.png",
+    "case_description": "Ảnh đầu vào chỉ có nền hoặc phong cảnh; thêm một vật thể mới vào cảnh.",
+    "case_file": "background_insertion"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Spatial Placement",
+    "text": "Integrate a solitary figure walking away from the camera on the snow-covered bank to the left of the wooden post, dressed in a dark winter coat and hat, with subtle footprints trailing behind them in the fresh snow, ensuring the soft, diffused lighting and shadows are consistent with the overcast winter scene.",
+    "open_image_input_url": "https://c1.staticflickr.com/6/5293/5531390260_010976ffe3_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/43028.png",
+    "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+    "case_file": "spatial_placement"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Spatial Placement",
+    "text": "Integrate a vintage-style basketball, with a worn leather texture and classic orange-brown color, into the scene by placing it to the left of the sneakers and slightly behind them, ensuring it casts a subtle, realistic shadow consistent with the existing lighting and is partially obscured by the left sneaker to blend naturally into the composition while maintaining the image's warm, slightly desaturated aesthetic.",
+    "open_image_input_url": "https://c5.staticflickr.com/9/8390/8641569933_6ba046325d_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/203275.png",
+    "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+    "case_file": "spatial_placement"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Spatial Placement",
+    "text": "Integrate a vibrant green succulent plant in a minimalist white ceramic pot onto the foreground desk, positioned to the left of the black telephone, ensuring its lighting and shadows realistically match the office environment and the plant's size is appropriate for a desk accessory.",
+    "open_image_input_url": "https://farm1.staticflickr.com/4041/4311878362_15df20d781_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf041x_retry2.png",
+    "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+    "case_file": "spatial_placement"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Spatial Placement",
+    "text": "Add a bright orange traffic cone, slightly weathered and dirty, to the sidewalk directly to the left of the damaged green car's front wheel, ensuring its shadows are consistent with the ambient lighting and its base is firmly on the ground.",
+    "open_image_input_url": "https://farm3.staticflickr.com/8104/8646124305_78806e78f1_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/201736.png",
+    "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+    "case_file": "spatial_placement"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Spatial Placement",
+    "text": "Introduce a vibrant, yellow, chew-resistant rubber dog toy shaped like a ball, positioned on the speckled floor slightly to the left of the black dog's front paws, ensuring it casts a soft, realistic shadow consistent with the overhead lighting and exhibits a subtle matte texture.",
+    "open_image_input_url": "https://c8.staticflickr.com/6/5608/15525079697_d80ef0b768_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/74626.png",
+    "case_description": "Thêm vật thể mới vào vị trí được chỉ định, thường dựa trên quan hệ với vật thể có sẵn.",
+    "case_file": "spatial_placement"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Object Cloning",
+    "text": "Introduce a second red and white soccer ball, identical in style to the one near the main player, placing it in the far background near the goalpost on the left side, ensuring it is appropriately scaled, naturally lit, and subtly blurred to match the depth of field of the background elements, appearing as if another ball is out of play.",
+    "open_image_input_url": "https://c2.staticflickr.com/7/6118/6323640870_60356eb551_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf2a98_retry1.png",
+    "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+    "case_file": "object_cloning"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Object Cloning",
+    "text": "Add a second rugby ball, identical in design and coloring to the one the player is holding, positioned on the grass in the mid-ground to the left of the player, ensuring it has a slight, soft shadow consistent with the bright, diffused daylight of the scene.",
+    "open_image_input_url": "https://c8.staticflickr.com/1/200/467750174_a6b60a9150_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1teg_retry2.png",
+    "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+    "case_file": "object_cloning"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Object Cloning",
+    "text": "Add a second ornate black metal park bench with wooden slats, similar in style and material to the existing one, positioned on the brick path slightly to the left and closer to the foreground bushes, ensuring its lighting and shadows are consistent with the bright, sunny afternoon light on the existing bench and surrounding environment.",
+    "open_image_input_url": "https://farm2.staticflickr.com/7043/6796512132_5f5dd4fa0e_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/262945.png",
+    "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+    "case_file": "object_cloning"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Object Cloning",
+    "text": "Add a second, identical yellow water polo ball floating naturally in the water, slightly submerged to the left of the player's hand, ensuring it has similar lighting reflections and water ripples as the existing ball.",
+    "open_image_input_url": "https://c5.staticflickr.com/6/5608/15205181993_b9c060d1a7_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/246292.png",
+    "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+    "case_file": "object_cloning"
+  },
+  {
+    "operation": "ADD",
+    "edit_type": "Add a new object to the scene",
+    "case": "Object Cloning",
+    "text": "Add a second basketball, identical in color and texture to the one in mid-air, realistically positioned on the wooden court floor in the lower left foreground, casting a soft shadow consistent with the room's bright, even lighting, as if it has just rolled to a stop.",
+    "open_image_input_url": "https://c5.staticflickr.com/9/8252/8484393787_7ae7e1da3d_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/172112.png",
+    "case_description": "Thêm bản sao hoặc vật thể tương tự dựa trên một vật thể đã có trong ảnh.",
+    "case_file": "object_cloning"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Single-Object Scene",
+    "text": "Remove the single heart-shaped red cherry from the light gray surface, seamlessly filling the empty space with the existing light gray textured surface and maintaining the original lighting and subtle reflections to create a natural and untouched appearance.",
+    "open_image_input_url": "https://farm7.staticflickr.com/5195/14325884481_cdf7f282e2_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/39818.png",
+    "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Single-Object Scene",
+    "text": "Remove the prominent yellow five-armed starfish from the center of the image, seamlessly infilling the area with the surrounding textured, greyish-brown rocky substrate, meticulously matching its granular texture, subtle color variations, and existing lighting to ensure a natural and undetectable edit while preserving the nearby white sponge-like organism.",
+    "open_image_input_url": "https://c7.staticflickr.com/6/5153/14502031541_9312cab479_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/264600.png",
+    "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Single-Object Scene",
+    "text": "Seamlessly remove the large, brown, gelatinous object (jellyfish) from the sandy foreground, ensuring the newly exposed beach area perfectly matches the surrounding sand's texture, granular detail, and subtle light reflections from the sunset, maintaining a natural and undisturbed transition to the ocean and horizon.",
+    "open_image_input_url": "https://farm7.staticflickr.com/5317/5818263324_bd1677d247_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/193816.png",
+    "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Single-Object Scene",
+    "text": "Remove the large, derelict wooden boat from the foreground, seamlessly replacing the area it occupies with lush green grass that matches the existing lawn's texture, color, and overcast lighting, while naturally extending the stone wall, road, and distant buildings to complete the background composition.",
+    "open_image_input_url": "https://c5.staticflickr.com/8/7543/15627882204_de6c08b462_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/64976.png",
+    "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Single-Object Scene",
+    "text": "Remove the prominent, shaggy-haired, light-brown Highland cow from the center of the sandy beach, seamlessly infilling the vacated space with the existing textures of light-colored sand, scattered dark seaweed, and small pebbles, while extending the calm grey-blue ocean, distant rocky islands, and overcast sky to maintain the original natural coastal landscape and soft lighting.",
+    "open_image_input_url": "https://c1.staticflickr.com/1/26/42648534_36e8216f31_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/197685.png",
+    "case_description": "Ảnh có một vật thể chính; xóa vật thể đó và tái tạo phần nền bị che.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Multi-Object Scene",
+    "text": "Remove the man in the green military fatigues and dark cap standing to the left of the main subjects, next to the open airplane door, ensuring the background is seamlessly infilled with the metallic texture and white/grey surface of the aircraft fuselage and the concrete ground, maintaining consistent lighting and shadow.",
+    "open_image_input_url": "https://c5.staticflickr.com/4/3712/9447342281_15fda0a519_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1ihk_retry1.png",
+    "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Multi-Object Scene",
+    "text": "Seamlessly remove the standing carved figure located in the upper row, second from the left, ensuring the background is filled with the matching ancient, weathered stone texture and color, while preserving the natural lighting and intricate carving style of the surrounding temple wall.",
+    "open_image_input_url": "https://farm2.staticflickr.com/7386/16400716655_d892ff00d8_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/227415.png",
+    "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Multi-Object Scene",
+    "text": "Remove the person wearing the yellow safety vest standing between the two cars, seamlessly filling the empty space with the continuation of the asphalt road texture, the green grassy field, and the distant trees, ensuring the lighting and color balance naturally with the surrounding environment.",
+    "open_image_input_url": "https://farm4.staticflickr.com/3689/9591670076_343b0421b0_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/44976.png",
+    "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Multi-Object Scene",
+    "text": "Remove the second, partially visible butterfly in the lower-right section of the image, seamlessly extending the vibrant green leaf and its natural texture underneath to maintain the original lighting and focus on the single resting butterfly.",
+    "open_image_input_url": "https://farm3.staticflickr.com/8716/17527323592_4d330796eb_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/52363.png",
+    "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REMOVE",
+    "edit_type": "Remove an existing object",
+    "case": "Multi-Object Scene",
+    "text": "Seamlessly remove the soccer player wearing the orange jersey with the number '1' on her back, positioned in the foreground of the image, and intelligently fill the resulting space with the artificial green turf, ensuring the texture, color, and white field lines are extended naturally to maintain a consistent and realistic appearance of the soccer field.",
+    "open_image_input_url": "https://farm1.staticflickr.com/8732/16845537628_b2d87992ab_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/75054.png",
+    "case_description": "Ảnh có nhiều vật thể; xóa đúng một vật thể được mô tả, giữ các vật thể còn lại.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Color Change",
+    "text": "Change the color of the red polo shirt worn by the girl to a vibrant royal blue, ensuring the fabric texture, natural folds, and the interplay of light and shadow are realistically maintained to seamlessly integrate with the existing scene.",
+    "open_image_input_url": "https://farm8.staticflickr.com/8604/16770486511_d560471507_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf3etr_retry1.png",
+    "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+    "case_file": "color_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Color Change",
+    "text": "Change the bright orange jacket worn by the person on the left to a rich, deep forest green, ensuring the new color accurately reflects the natural sunlight and shadows present in the scene and maintains the jacket's original fabric texture.",
+    "open_image_input_url": "https://farm4.staticflickr.com/8630/16704422676_cde53b614e_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/166997.png",
+    "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+    "case_file": "color_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Color Change",
+    "text": "Change the bicycle frame's color from its current dark grey to a vibrant, glossy 'Electric Blue', ensuring the new finish realistically reflects light and preserves the existing shadows and highlights of the frame's carbon fiber texture.",
+    "open_image_input_url": "https://c5.staticflickr.com/8/7465/15901343556_360756ee78_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf1d68_retry1.png",
+    "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+    "case_file": "color_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Color Change",
+    "text": "Change the color of the man's black fleece jacket to a vibrant crimson red, ensuring the fleece texture, existing shadows, and highlights are realistically maintained for a natural appearance.",
+    "open_image_input_url": "https://c2.staticflickr.com/2/1341/3269662397_fc0afae96f_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kezxer_retry1.png",
+    "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+    "case_file": "color_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Color Change",
+    "text": "Change the color of the red car to a deep metallic blue, ensuring the paint reflects the surrounding environment and light conditions realistically, while maintaining its original sheen and shadow details.",
+    "open_image_input_url": "https://c6.staticflickr.com/3/2881/13581417985_5720f12e97_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/85630.png",
+    "case_description": "Đổi màu vật thể mục tiêu, giữ nguyên đặc điểm và bối cảnh xung quanh.",
+    "case_file": "color_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Material Change",
+    "text": "Change the material of the building's wooden siding to a sleek, dark charcoal gray metal cladding with a subtle matte finish, ensuring the existing shadows from the tree and the overall lighting are realistically maintained on the new surface.",
+    "open_image_input_url": "https://farm7.staticflickr.com/2846/8854865440_2c583c44e3_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/167464.png",
+    "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+    "case_file": "material_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Material Change",
+    "text": "Change the wooden wall in all four panels to a dark, weathered red brick texture, ensuring the existing posters, murals, and artists are seamlessly integrated with appropriate shadows and lighting for a realistic appearance.",
+    "open_image_input_url": "https://farm7.staticflickr.com/5477/9318975908_231b4fb76d_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/108811.png",
+    "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+    "case_file": "material_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Material Change",
+    "text": "Recolor all visible chairs from their current silver/white metallic finish to a rich, dark polished mahogany wood, ensuring realistic wood grain texture, subtle reflections, and consistent lighting that integrates seamlessly with the existing environment.",
+    "open_image_input_url": "https://farm7.staticflickr.com/1335/1224406377_a9a0772ed2_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/keyvx3_retry1.png",
+    "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+    "case_file": "material_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Material Change",
+    "text": "Change the material of the large castle structure from its current reddish-brown brick to a lighter, more weathered grey stone, ensuring the new texture seamlessly integrates with the existing lighting and shadows to maintain a realistic appearance.",
+    "open_image_input_url": "https://c5.staticflickr.com/6/5594/14602146978_d8f5015c42_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf2rcu_retry1.png",
+    "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+    "case_file": "material_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Change an object's attribute (e.g., color/material)",
+    "case": "Material Change",
+    "text": "Change the material of all visible seat covers from their current light brown fabric to a deep, rich burgundy velvet, ensuring the new texture realistically interacts with the existing ambient lighting and shadow details within the train car.",
+    "open_image_input_url": "https://c3.staticflickr.com/4/3898/14750060747_c86d1963d7_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/176717.png",
+    "case_description": "Đổi chất liệu hoặc kết cấu bề mặt của vật thể mục tiêu, giữ nguyên bối cảnh.",
+    "case_file": "material_change"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Convert person to Pixar/Disney-like 3D cartoon look",
+    "case": "Local Style Transfer",
+    "text": "Transform the person on the inflatable tube into a vibrant, 3D Pixar/Disney-style cartoon character with smooth, stylized features, soft, diffused lighting, and clean, almost plastic-like textures, ensuring the surrounding river, tube, and iPod display retain their original realistic appearance and lighting.",
+    "open_image_input_url": "https://c6.staticflickr.com/3/2654/3906853130_2b82a3eef8_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/284489.png",
+    "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+    "case_file": "local_style_transfer"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "LEGO-minifigure rendition of the person",
+    "case": "Local Style Transfer",
+    "text": "Transform the silhouetted person in the foreground into a classic LEGO minifigure, precisely replicating its pose and distinctive hand gesture, while preserving the deep shadow and warm rim lighting that defines its silhouette against the unchanged, realistic backdrop of the sleeping dog on the grassy lawn.",
+    "open_image_input_url": "https://c1.staticflickr.com/6/5616/15648395039_e730001a3e_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kew86s_retry2.png",
+    "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+    "case_file": "local_style_transfer"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Convert person to 2D anime/manga style (identity-preserving)",
+    "case": "Local Style Transfer",
+    "text": "Transform only the person in the image into a detailed 2D anime/manga style, preserving his identity with recognizable facial features, hairstyle, and pose, using bold, clean linework, vibrant flat colors with distinct cel-shading for highlights and shadows, stylized expressive eyes that retain his original eye color, and simplified clothing textures, while leaving the background, food, and surrounding environment completely untouched in their original photographic realism to create a striking stylistic contrast.",
+    "open_image_input_url": "https://c2.staticflickr.com/8/7685/16917959937_4c95e3ef88_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kevox7_retry1.png",
+    "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+    "case_file": "local_style_transfer"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Convert person to Western comic cel-shaded style",
+    "case": "Local Style Transfer",
+    "text": "Transform the person on the left into a Western comic cel-shaded style, characterized by bold, dark outlines around the figure and facial features, flat and unblended colors for skin, hair, and clothing, and hard-edged, simplified shadows and highlights, ensuring the dog and background retain their original realistic appearance for a contrasting effect.",
+    "open_image_input_url": "https://farm1.staticflickr.com/3115/13059678375_9c8b8310b7_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/283516.png",
+    "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+    "case_file": "local_style_transfer"
+  },
+  {
+    "operation": "CHANGE",
+    "edit_type": "Line-art ink sketch of the person",
+    "case": "Local Style Transfer",
+    "text": "Convert only the foreground person into a monochrome black ink line drawing with white fill, featuring crisp outlines and minimal shading to retain facial features, while preserving the original vibrant colors, lighting, and realistic details of the background scene.",
+    "open_image_input_url": "https://farm5.staticflickr.com/3791/9444834711_4b3fa65c1a_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/300210.png",
+    "case_description": "Chuyển phong cách của riêng đối tượng mục tiêu, giữ nền và các đối tượng khác chân thực.",
+    "case_file": "local_style_transfer"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Single-Object Scene",
+    "text": "Replace the brown lizard on the mossy log with a small, camouflaged green tree frog, ensuring its skin texture appears slightly moist and bumpy, its body is positioned naturally on the log similar to the original lizard, and the natural lighting and blurred green forest background are seamlessly integrated to maintain realism.",
+    "open_image_input_url": "https://c1.staticflickr.com/9/8177/7984020841_c69fee78d4_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/149747.png",
+    "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Single-Object Scene",
+    "text": "Replace the fuzzy red dice hanging from the rearview mirror with a small, intricately carved wooden rosary, ensuring its natural dark wood tones, fine texture, and realistic lighting integrate seamlessly with the car's vintage interior and the surrounding ambient light.",
+    "open_image_input_url": "https://farm5.staticflickr.com/4150/5394169192_bba9a9a02e_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/236797.png",
+    "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Single-Object Scene",
+    "text": "Replace the entire vintage blue pickup truck with a pristine, glossy black 1957 Chevrolet Bel Air, ensuring the new vehicle matches the bright, sunny lighting conditions, casts accurate shadows on the dusty ground, and reflects the surrounding green foliage realistically on its polished surfaces, while maintaining the original perspective and composition.",
+    "open_image_input_url": "https://farm7.staticflickr.com/5331/10025363663_ec4321fb4a_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/228863.png",
+    "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Single-Object Scene",
+    "text": "Replace the large, fluffy, light-colored plush alpaca with a realistic-looking, medium-sized, light ginger cat, ensuring its fur is detailed and soft, its emerald green eyes are bright, and it maintains the same embracing pose with the doll, all while preserving the soft, natural lighting and shallow depth of field of the original image.",
+    "open_image_input_url": "https://farm3.staticflickr.com/2890/11953402936_7ebbf62e5f_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/229513.png",
+    "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Single-Object Scene",
+    "text": "Replace the large metal fabric scissors with a modern rotary cutter, ensuring its plastic handle and sharp circular blade match the existing bright lighting and reflections, and position it realistically on the marked paper and fabric as if ready to cut along the blue line, maintaining the original image's composition and realism.",
+    "open_image_input_url": "https://c1.staticflickr.com/9/8481/8228190127_769355daf6_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/187670.png",
+    "case_description": "Ảnh có một vật thể chính; thay vật thể đó bằng một loại vật thể khác.",
+    "case_file": "single_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Multi-Object Scene",
+    "text": "Replace the protest sign in the center of the image with a modern, slim LED digital display screen showing the text 'CLIMATE ACTION NOW' in a bold, sans-serif font with vibrant green letters against a dark blue background, ensuring the screen's brightness, reflections, and perspective realistically match the outdoor protest environment.",
+    "open_image_input_url": "https://c6.staticflickr.com/7/6217/6245949553_4427f866a3_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/196584.png",
+    "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Multi-Object Scene",
+    "text": "Replace the football player wearing the blue and red uniform, white helmet, and black cleats with a dynamic soccer player in a vibrant green and white uniform, including a jersey, shorts, socks, shin guards, and black soccer cleats, ensuring the new player's pose, lighting, and textures are seamlessly integrated to match the original image's outdoor daylight conditions and perspective on the grassy field.",
+    "open_image_input_url": "https://farm4.staticflickr.com/3081/2854393181_99f4a23b10_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/119666.png",
+    "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Multi-Object Scene",
+    "text": "Replace the American flag to the left of the podium with a plain blue corporate flag featuring a simple white circular logo in the center, ensuring the new flag realistically drapes and reflects the ambient light and shadows of the scene while keeping the golden eagle finial on the flagpole.",
+    "open_image_input_url": "https://farm5.staticflickr.com/7255/7740184378_d1ca996e4f_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/4880.png",
+    "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Multi-Object Scene",
+    "text": "Replace the silver metal bottle with a straw that the woman on the right is holding with a vintage-style black wired microphone, ensuring it has a metallic grille and a natural shadow cast on her hand, reflecting the existing soft, warm indoor lighting, and ensure her grip looks natural around the microphone, maintaining the original pose and eye contact.",
+    "open_image_input_url": "https://farm4.staticflickr.com/1025/1434410227_10888c6bdd_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/177645.png",
+    "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "REPLACE",
+    "edit_type": "Replace one object category with another",
+    "case": "Multi-Object Scene",
+    "text": "Replace the leftmost white mug, featuring a yellow figure, with a vintage-style porcelain teapot with a delicate blue floral pattern, ensuring it is proportionally scaled to the other items and casts natural shadows onto the wooden surface, while maintaining the soft, ambient lighting of the scene.",
+    "open_image_input_url": "https://farm5.staticflickr.com/2247/2188378275_d0e03312a1_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/173504.png",
+    "case_description": "Ảnh có nhiều vật thể; thay đúng một vật thể mục tiêu bằng loại khác.",
+    "case_file": "multi_object_scene"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Horizontal Move",
+    "text": "Relocate the American flag from its current position on the right side of the porch railing to the left side of the porch, ensuring its folds, colors (red, white, and blue), and lighting are realistically preserved and integrated, while naturally extending the background foliage and porch structure to fill the empty space left by its removal on the right.",
+    "open_image_input_url": "https://c1.staticflickr.com/7/6121/5995735574_14c58e9050_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/21623.png",
+    "case_description": "Di chuyển vật thể sang trái hoặc phải, giữ đặc điểm vật thể và tái tạo nền ở vị trí cũ.",
+    "case_file": "horizontal_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Horizontal Move",
+    "text": "Reposition the young boy from his current left-of-center placement to the right-of-center of the frame, ensuring his original contemplative gaze towards the left remains, while seamlessly extending and re-rendering the verdant background foliage and tree branches on the left side to fill the newly exposed space, maintaining the soft, natural light and shallow depth of field.",
+    "open_image_input_url": "https://farm5.staticflickr.com/3572/3321977832_3bf36e2db1_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/165293.png",
+    "case_description": "Di chuyển vật thể sang trái hoặc phải, giữ đặc điểm vật thể và tái tạo nền ở vị trí cũ.",
+    "case_file": "horizontal_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Horizontal Move",
+    "text": "Relocate the small wooden hut, currently situated on the left bank of the lake, to the right bank, placing it approximately halfway between the existing large bright green tree and the water's edge, ensuring its new position appears naturally integrated within the surrounding foliage and that its reflection is accurately cast onto the water, maintaining the original scene's soft lighting and lush green textures.",
+    "open_image_input_url": "https://farm7.staticflickr.com/5488/14221105863_5c29bdb468_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf3lt1_retry1.png",
+    "case_description": "Di chuyển vật thể sang trái hoặc phải, giữ đặc điểm vật thể và tái tạo nền ở vị trí cũ.",
+    "case_file": "horizontal_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Horizontal Move",
+    "text": "Relocate the spherical hanging lantern from the left side of the bed to the right side, placing it symmetrically above the right bedside table, ensuring its hanging cord is seamlessly integrated into the white wall and the soft light it emits naturally complements the existing room illumination.",
+    "open_image_input_url": "https://c6.staticflickr.com/9/8441/7994472409_9f8ccc66e9_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/241453.png",
+    "case_description": "Di chuyển vật thể sang trái hoặc phải, giữ đặc điểm vật thể và tái tạo nền ở vị trí cũ.",
+    "case_file": "horizontal_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Horizontal Move",
+    "text": "Relocate the stone bust slightly to the right within the frame, ensuring the dark leafy background seamlessly extends to fill the newly exposed space on the left, maintaining the original lighting, textures, and the bust's upward-looking pose for a natural compositional shift.",
+    "open_image_input_url": "https://farm1.staticflickr.com/7270/7099492837_5ac274030f_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/134141.png",
+    "case_description": "Di chuyển vật thể sang trái hoặc phải, giữ đặc điểm vật thể và tái tạo nền ở vị trí cũ.",
+    "case_file": "horizontal_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Reference-Guided Move",
+    "text": "Relocate the gray cylindrical bin from its current position next to the fireplace to the empty space between the two wooden cribs, ensuring its texture and lighting seamlessly integrate with the room's soft, natural illumination and the dark wooden floor.",
+    "open_image_input_url": "https://c3.staticflickr.com/9/8670/16723972475_a1308b1ed3_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kezt71_retry2.png",
+    "case_description": "Di chuyển vật thể đến vị trí đích xác định theo quan hệ không gian với vật thể khác.",
+    "case_file": "reference_guided_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Reference-Guided Move",
+    "text": "Relocate the grey and white cat from its current position on the floor next to the person on the far right, placing it instead on the lap of the person on the far left, ensuring realistic shadows on their clothing and a seamlessly reconstructed floor where the cat originally sat.",
+    "open_image_input_url": "https://farm7.staticflickr.com/7592/16577779437_6c53ae9be5_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/63110.png",
+    "case_description": "Di chuyển vật thể đến vị trí đích xác định theo quan hệ không gian với vật thể khác.",
+    "case_file": "reference_guided_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Reference-Guided Move",
+    "text": "Relocate the black sunglasses from the top of the head of the man wearing the light blue t-shirt in the foreground to a position resting naturally on the table directly in front of him, ensuring consistent lighting, realistic shadows, and seamless blending with the table's surface.",
+    "open_image_input_url": "https://farm1.staticflickr.com/1075/1280594234_f4557acf0d_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf278f_retry2.png",
+    "case_description": "Di chuyển vật thể đến vị trí đích xác định theo quan hệ không gian với vật thể khác.",
+    "case_file": "reference_guided_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Reference-Guided Move",
+    "text": "Relocate the sleeping dog from its current position to a spot directly in front of the '090' newspaper dispenser, ensuring its curled posture and fur texture remain consistent, and seamlessly integrate it with the concrete pavement while preserving the soft, ambient lighting and natural shadows of the scene.",
+    "open_image_input_url": "https://farm7.staticflickr.com/4116/4889238728_6ca7d7bc71_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/132581.png",
+    "case_description": "Di chuyển vật thể đến vị trí đích xác định theo quan hệ không gian với vật thể khác.",
+    "case_file": "reference_guided_move"
+  },
+  {
+    "operation": "RELOCATE",
+    "edit_type": "Relocate an object (change its position/spatial relation)",
+    "case": "Reference-Guided Move",
+    "text": "Relocate the dinosaur toy from its current position to the right, placing it closer to the white striped pillar on the red wall, while maintaining its current scale, lighting, and perspective, and seamlessly extending the red wall's texture and white graffiti into the area where the dinosaur was originally positioned.",
+    "open_image_input_url": "https://farm6.staticflickr.com/4064/4693865928_7931b2fe97_o.jpg",
+    "output_image": "https://ml-site.cdn-apple.com/datasets/pico-banana-300k/nb/images/positive-edit/kf2num_retry1.png",
+    "case_description": "Di chuyển vật thể đến vị trí đích xác định theo quan hệ không gian với vật thể khác.",
+    "case_file": "reference_guided_move"
+  }
+]
