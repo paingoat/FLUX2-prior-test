@@ -1,8 +1,7 @@
 """Interactive FLUX.2 [klein] editor.
 
-The scribble is flattened onto the uploaded image before inference. Each run
-writes ``output/gradio/<name>_<timestamp>/`` with the composited input, the
-result, a side-by-side visual, and the run config.
+Compare an overlay alone with two references: clean original, then overlay.
+Each run saves both source images, output, comparison and inference config.
 """
 
 from __future__ import annotations
@@ -32,6 +31,22 @@ from app.common.visual import make_visual
 
 OUTPUT_ROOT = REPO_ROOT / "output" / "gradio"
 _MANAGER: ModelManager | None = None
+MULTI_REFERENCE_INSTRUCTIONS = (
+    "Image 1 is the original image to edit.\n"
+    "Image 2 is the same image with scribble annotations indicating the edit.\n"
+    "Use image 1 as the source and image 2 as spatial guidance.\n"
+    "Do not reproduce the annotation strokes in the output.\n"
+    "Preserve content outside the requested edit.\n\n"
+    "Editing instruction: "
+)
+
+
+def effective_prompt(prompt: str, input_mode: str) -> str:
+    if input_mode == "multi_reference":
+        return MULTI_REFERENCE_INSTRUCTIONS + (prompt or "").strip()
+    if input_mode == "overlay":
+        return (prompt or "").strip()
+    raise gr.Error(f"Unknown input mode: {input_mode!r}.")
 
 
 def _manager() -> ModelManager:
@@ -92,6 +107,21 @@ def _flatten(editor_value) -> Image.Image:
     return _to_rgb(composite)
 
 
+def _editor_images(editor_value) -> tuple[Image.Image, Image.Image]:
+    overlay = _flatten(editor_value)
+    original = (
+        _as_image(editor_value.get("background"))
+        if isinstance(editor_value, dict)
+        else _as_image(editor_value)
+    )
+    if original is None:
+        raise gr.Error("The clean original is missing. Upload the original image again.")
+    original = _to_rgb(original)
+    if overlay.size != original.size:
+        overlay = overlay.resize(original.size, Image.Resampling.LANCZOS)
+    return original, overlay
+
+
 def _as_image(value) -> Image.Image | None:
     if value is None:
         return None
@@ -121,7 +151,7 @@ def _apply_variant(variant: str):
     )
 
 
-def run_edit(name, prompt, editor_value, variant, seed, steps, guidance):
+def run_edit(name, prompt, editor_value, variant, seed, steps, guidance, input_mode="overlay"):
     cleaned_name = (name or "").strip()
     cleaned_prompt = (prompt or "").strip()
     if not cleaned_name:
@@ -131,27 +161,35 @@ def run_edit(name, prompt, editor_value, variant, seed, steps, guidance):
     if seed is None:
         raise gr.Error("Seed is required.")
 
-    source = _flatten(editor_value)
+    model_prompt = effective_prompt(cleaned_prompt, input_mode)
+    original, overlay = _editor_images(editor_value)
+    source = [original, overlay] if input_mode == "multi_reference" else overlay
     result, meta = _manager().edit(
         variant=variant,
         image=source,
-        prompt=cleaned_prompt,
+        prompt=model_prompt,
         seed=int(seed),
         steps=None if steps is None else int(steps),
         guidance=None if guidance is None else float(guidance),
     )
-    visual = make_visual(source, result, cleaned_prompt)
+    visual = make_visual(overlay, result, f"{input_mode}\n{model_prompt}", original=original)
 
     run_dir = OUTPUT_ROOT / f"{slugify(cleaned_name)}_{timestamp()}"
     run_dir.mkdir(parents=True, exist_ok=False)
-    source.save(run_dir / "input.png")
+    original.save(run_dir / "original.png")
+    overlay.save(run_dir / "overlay.png")
     result.save(run_dir / "result.png")
     visual.save(run_dir / "visual.png")
     config = {
         "name": cleaned_name,
         "prompt": cleaned_prompt,
+        "effective_prompt": model_prompt,
+        "input_mode": input_mode,
+        "reference_order": ["original.png", "overlay.png"] if input_mode == "multi_reference" else ["overlay.png"],
         "files": {
-            "input": "input.png",
+            "original": "original.png",
+            "overlay": "overlay.png",
+            "input": "overlay.png",
             "result": "result.png",
             "visual": "visual.png",
         },
@@ -170,8 +208,9 @@ def build_demo() -> gr.Blocks:
     with gr.Blocks(title="FLUX.2 klein edit") as demo:
         gr.Markdown(
             "# FLUX.2 [klein] 4B edit\n"
-            "Draw on the uploaded image. The scribble is flattened onto the "
-            "photo before the model sees it. Distilled settings are fixed at "
+            "Draw on a clean uploaded image. Compare overlay-only editing with "
+            "multi-reference editing (original first, annotated image second). "
+            "Distilled settings are fixed at "
             f"**{distill.steps} steps, guidance {distill.guidance:g}**. "
             "Base defaults are **50 steps, guidance 4.0** and can be changed."
         )
@@ -180,6 +219,15 @@ def build_demo() -> gr.Blocks:
                 name = gr.Textbox(label="Name", placeholder="experiment name")
                 prompt = gr.Textbox(label="Prompt", lines=4)
                 editor = _editor()
+                input_mode = gr.Radio(
+                    choices=[
+                        ("Overlay only (baseline)", "overlay"),
+                        ("Multi-reference (original + overlay)", "multi_reference"),
+                    ],
+                    value="overlay",
+                    label="Input mode",
+                )
+                prompt_preview = gr.Textbox(label="Prompt sent to model", lines=8, interactive=False)
                 variant = gr.Radio(
                     choices=[
                         ("distill — 4 steps, guidance 1.0 (fixed)", "distill"),
@@ -214,9 +262,11 @@ def build_demo() -> gr.Blocks:
                 saved = gr.Textbox(label="Saved to")
 
         variant.change(_apply_variant, inputs=variant, outputs=[steps, guidance])
+        prompt.change(effective_prompt, inputs=[prompt, input_mode], outputs=prompt_preview)
+        input_mode.change(effective_prompt, inputs=[prompt, input_mode], outputs=prompt_preview)
         run_btn.click(
             run_edit,
-            inputs=[name, prompt, editor, variant, seed, steps, guidance],
+            inputs=[name, prompt, editor, variant, seed, steps, guidance, input_mode],
             outputs=[result, visual, config, saved],
             concurrency_limit=1,
         )

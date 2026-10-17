@@ -9,9 +9,8 @@ Official Black Forest Labs sampling settings (flux2 ``FLUX2_MODEL_INFO``):
 
 The two repos ship the same Qwen3-4B text encoder and the same VAE, so the
 second pipeline reuses those modules and only loads its own transformer.
-Leaving ``height`` and ``width`` unset makes ``Flux2KleinPipeline`` shrink a
-reference above 1024*1024 down to that area, round both sides to a multiple
-of 16, and emit an image of that size.
+Output dimensions follow the first reference, capped at 1024*1024 pixels
+and rounded down to multiples of 16, for comparable single/multi-image runs.
 """
 
 from __future__ import annotations
@@ -160,7 +159,7 @@ class ModelManager:
     def edit(
         self,
         variant: str,
-        image: Image.Image,
+        image: Image.Image | list[Image.Image],
         prompt: str,
         seed: int,
         steps: int | None = None,
@@ -168,6 +167,11 @@ class ModelManager:
         *,
         quiet: bool = False,
     ) -> tuple[Image.Image, dict[str, Any]]:
+        references = image if isinstance(image, list) else [image]
+        if not references or not all(isinstance(ref, Image.Image) for ref in references):
+            raise ValueError("Provide an image or a non-empty list of PIL images.")
+        references = [ref.convert("RGB") for ref in references]
+        seen = model_input_size(references[0])
         spec = _spec(variant)
         pipe = self.load(variant, quiet=quiet)
         if spec.fixed:
@@ -177,17 +181,20 @@ class ModelManager:
             steps = spec.steps if steps is None else int(steps)
             guidance = spec.guidance if guidance is None else float(guidance)
 
-        image = image.convert("RGB")
-        seen = model_input_size(image)
         generator = torch.Generator(device="cuda").manual_seed(int(seed))
+        torch.cuda.synchronize()
+        torch.cuda.reset_peak_memory_stats()
         started = time.perf_counter()
         result = pipe(
-            image=image,
+            image=references if isinstance(image, list) else references[0],
             prompt=prompt,
+            width=seen[0],
+            height=seen[1],
             num_inference_steps=steps,
             guidance_scale=guidance,
             generator=generator,
         ).images[0]
+        torch.cuda.synchronize()
         elapsed = time.perf_counter() - started
 
         meta = {
@@ -200,10 +207,14 @@ class ModelManager:
             "seed": int(seed),
             "dtype": "bfloat16",
             "max_area": MAX_AREA,
-            "input_size": [image.width, image.height],
+            "input_size": list(references[0].size),
+            "reference_count": len(references),
+            "reference_sizes": [list(ref.size) for ref in references],
+            "reference_model_sizes": [list(model_input_size(ref)) for ref in references],
             "model_input_size": [seen[0], seen[1]],
             "output_size": [result.width, result.height],
             "elapsed_sec": round(elapsed, 3),
+            "peak_vram_allocated_mb": round(torch.cuda.max_memory_allocated() / 1024**2, 1),
             "torch": torch.__version__,
             "diffusers": diffusers.__version__,
             "gpu": torch.cuda.get_device_name(0),

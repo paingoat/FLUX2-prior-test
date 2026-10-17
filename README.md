@@ -66,14 +66,32 @@ python app/gradio_inference/app.py
 
 The process prints a local URL and a public `*.gradio.live` link (`GRADIO_SHARE=1` in `.env`). Pass `--no-share` to stay local. The server listens on `0.0.0.0` and `GRADIO_PORT` (default 7860).
 
-The form is a name, a prompt, an image editor (upload plus a red/green/blue/yellow scribble), and a model switch. Distill locks steps and guidance. Base starts at 50 / 4.0 and can be changed under Advanced. Both models load at startup and share the text encoder and VAE, so switching is immediate.
+The form is a name, a prompt, an image editor (upload plus a red/green/blue/yellow scribble), an input mode, and a model switch. Distill locks steps and guidance. Base starts at 50 / 4.0 and can be changed under Advanced. Both models load at startup and share the text encoder and VAE, so switching is immediate.
+
+Upload a **clean original**, then draw the annotations in the editor. Choose:
+
+- **Overlay only (baseline)**: sends the annotated composite as `image=overlay_image`, with your prompt unchanged.
+- **Multi-reference (original + overlay)**: sends `image=[original_image, overlay_image]`. A prompt prefix explains that image 1 is the source and image 2 contains spatial editing guidance, and asks to remove annotation strokes and preserve surrounding content. The full prompt appears in **Prompt sent to model**.
+
+Both modes use output dimensions derived from the original (at most 1024×1024 pixels in area, sides rounded down to multiples of 16). Separate references and prompting do not guarantee scribble compliance; this experiment measures it. Uploading an image that already has strokes does not provide a clean original.
 
 Each click writes `output/gradio/<name>_<YYYYmmdd-HHMMSS>/`:
 
-- `input.png` — uploaded image with the scribble flattened on top (this is what the model sees)
+- `original.png` — clean editor background
+- `overlay.png` — original with the scribble flattened on top
 - `result.png`
-- `visual.png` — input and result side by side, prompt caption underneath
-- `config.json` — prompt, seed, steps, guidance, sizes, timing, torch / diffusers versions, GPU name
+- `visual.png` — original, overlay and result side by side, mode and effective prompt underneath
+- `config.json` — input mode, ordered reference filenames, user/effective prompts, seed, steps, guidance, reference sizes, timing, peak allocated VRAM, torch / diffusers versions, GPU name
+
+For an A/B run, keep the image, scribble, editing instruction, model, seed, steps and guidance unchanged; run once per input mode using distinct experiment names. Repeat with distill and base on add, remove, replace and relocate examples. Compare instruction accuracy, scribble localization, stroke removal, preservation outside the edit, elapsed time and `peak_vram_allocated_mb`. The VRAM number includes resident model weights and allocations during inference, not total device memory or reserved memory; use the same preload/offload settings for comparisons. Two references require more memory. The multi-reference mode deliberately adds role instructions, so this compares the complete input-and-prompt strategies rather than isolating image count alone.
+
+Batch inference remains single-image. Multi-reference batch evaluation requires paired clean/annotated inputs; do not substitute target/ground-truth images for clean inputs.
+
+CPU wiring checks (no model downloads or CUDA needed):
+
+```bash
+python -m unittest discover -s tests -v
+```
 
 ```bash
 python app/gradio_inference/app.py --preload distill   # one model

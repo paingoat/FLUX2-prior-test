@@ -14,21 +14,30 @@ _FONT_CANDIDATES = (
 )
 
 
-def make_visual(left: Image.Image, right: Image.Image, caption: str) -> Image.Image:
-    """Place ``left`` and ``right`` at the result height, with ``caption`` below."""
-    left = left.convert("RGB")
-    right = right.convert("RGB")
+def make_visual(
+    left: Image.Image, right: Image.Image, caption: str, *, original: Image.Image | None = None
+) -> Image.Image:
+    """Show overlay/result, optionally preceded by the clean original."""
+    panels = [("Input + scribble", left), ("Output", right)]
+    if original is not None:
+        panels.insert(0, ("Original", original))
     target_h = right.height
-    if left.height != target_h and left.height > 0:
-        scale = target_h / left.height
-        left = left.resize((max(1, round(left.width * scale)), target_h), Image.Resampling.LANCZOS)
+    resized = []
+    for label, panel in panels:
+        panel = panel.convert("RGB")
+        if panel.height != target_h:
+            panel = panel.resize(
+                (max(1, round(panel.width * target_h / panel.height)), target_h),
+                Image.Resampling.LANCZOS,
+            )
+        resized.append((label, panel))
 
     gap = 16
     margin = 16
     label_h = 36
     label_font = _font(22)
     caption_font = _font(20)
-    canvas_w = margin * 2 + left.width + gap + right.width
+    canvas_w = margin * 2 + sum(panel.width for _, panel in resized) + gap * (len(resized) - 1)
     text_width = max(1, canvas_w - margin * 2)
     lines = _wrap(caption.strip(), caption_font, text_width) or [""]
     line_h = _line_height(caption_font)
@@ -37,12 +46,12 @@ def make_visual(left: Image.Image, right: Image.Image, caption: str) -> Image.Im
     canvas_h = margin + label_h + target_h + 12 + caption_h + margin
     canvas = Image.new("RGB", (canvas_w, canvas_h), (255, 255, 255))
     draw = ImageDraw.Draw(canvas)
-    draw.text((margin, margin), "Input + scribble", fill=(0, 0, 0), font=label_font)
-    draw.text((margin + left.width + gap, margin), "Output", fill=(0, 0, 0), font=label_font)
-
     y_img = margin + label_h
-    canvas.paste(left, (margin, y_img))
-    canvas.paste(right, (margin + left.width + gap, y_img))
+    x = margin
+    for label, panel in resized:
+        draw.text((x, margin), label, fill=(0, 0, 0), font=label_font)
+        canvas.paste(panel, (x, y_img))
+        x += panel.width + gap
 
     y = y_img + target_h + 12
     for line in lines:
