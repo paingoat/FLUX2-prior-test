@@ -60,6 +60,8 @@ It finds conda on `PATH`, then via `CONDA_EXE`, then under the usual prefixes (`
 
 ## Gradio
 
+Hướng dẫn tiếng Việt: [test 10 ảnh Prior với prompt ngắn, tự lưu và upload Hugging Face](docs/gradio_scribble_test_vi.md).
+
 ```bash
 python app/gradio_inference/app.py
 ```
@@ -75,13 +77,16 @@ Upload a **clean original**, then draw the annotations in the editor. Choose:
 
 Both modes use output dimensions derived from the original (at most 1024×1024 pixels in area, sides rounded down to multiples of 16). Separate references and prompting do not guarantee scribble compliance; this experiment measures it. Uploading an image that already has strokes does not provide a clean original.
 
-Each click writes `output/gradio/<name>_<YYYYmmdd-HHMMSS>/`:
+Each successful click writes `output/gradio/<name>_<YYYYmmdd-HHMMSS>_<unique-id>/`:
 
 - `original.png` — clean editor background
 - `overlay.png` — original with the scribble flattened on top
 - `result.png`
 - `visual.png` — original, overlay and result side by side, mode and effective prompt underneath
 - `config.json` — input mode, ordered reference filenames, user/effective prompts, seed, steps, guidance, reference sizes, timing, peak allocated VRAM, torch / diffusers versions, GPU name
+- `metadata.jsonl` — one ImageFolder row with original/overlay/result/visual image columns and ordered references, ready for Hugging Face dataset upload
+
+A ZIP of these six files is also saved under `output/gradio_exports/` and returned in **Download run (images + metadata ZIP)**. Upload either selected ZIPs or the run folders to a Hugging Face dataset repository; keep one copy per run. Upload remains manual. Existing runs are not backfilled. All output remains gitignored.
 
 For an A/B run, keep the image, scribble, editing instruction, model, seed, steps and guidance unchanged; run once per input mode using distinct experiment names. Repeat with distill and base on add, remove, replace and relocate examples. Compare instruction accuracy, scribble localization, stroke removal, preservation outside the edit, elapsed time and `peak_vram_allocated_mb`. The VRAM number includes resident model weights and allocations during inference, not total device memory or reserved memory; use the same preload/offload settings for comparisons. Two references require more memory. The multi-reference mode deliberately adds role instructions, so this compares the complete input-and-prompt strategies rather than isolating image count alone.
 

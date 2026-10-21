@@ -5,6 +5,7 @@ import json
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
@@ -59,8 +60,8 @@ class MultiReferenceTests(unittest.TestCase):
                     pipe = Mock(return_value=SimpleNamespace(images=[self.original.copy()]))
                     manager = flux.ModelManager()
                     manager.pipes[variant] = pipe
-                    with patch.object(editor, "_MANAGER", manager), patch.object(editor, "OUTPUT_ROOT", Path(tmp)):
-                        result, visual, config, saved = editor.run_edit(
+                    with patch.object(editor, "_MANAGER", manager), patch.object(editor, "OUTPUT_ROOT", Path(tmp) / "runs"):
+                        result, visual, config, saved, archive = editor.run_edit(
                             "test", "Add a vase.",
                             {"background": self.original, "composite": self.overlay},
                             variant, 42, 12, 2.0, mode,
@@ -85,9 +86,20 @@ class MultiReferenceTests(unittest.TestCase):
                     self.assertEqual(config["run"]["peak_vram_allocated_mb"], 1.0)
                     self.assertEqual(result.size, self.original.size)
                     self.assertEqual(visual.width, 3 * 96 + 4 * 16)
-                    for filename in ("original.png", "overlay.png", "result.png", "visual.png", "config.json"):
+                    filenames = ("original.png", "overlay.png", "result.png", "visual.png", "config.json", "metadata.jsonl")
+                    for filename in filenames:
                         self.assertTrue((Path(saved) / filename).is_file())
                     self.assertEqual(json.loads((Path(saved) / "config.json").read_text()), config)
+                    row = json.loads((Path(saved) / "metadata.jsonl").read_text(encoding="utf-8"))
+                    self.assertEqual(row["reference_file_names"], config["reference_order"])
+                    self.assertEqual(row["prompt"], "Add a vase.")
+                    self.assertEqual(row["effective_prompt"], args["prompt"])
+                    for key in ("original_file_name", "overlay_file_name", "result_file_name", "visual_file_name"):
+                        self.assertTrue((Path(saved) / row[key]).is_file())
+                    with zipfile.ZipFile(archive) as bundle:
+                        self.assertEqual(set(bundle.namelist()), set(filenames))
+                        self.assertIsNone(bundle.testzip())
+                        self.assertEqual(json.loads(bundle.read("metadata.jsonl")), row)
 
     def test_size_and_invalid_inputs(self):
         self.assertEqual(flux.model_input_size(Image.new("RGB", (2048, 1024))), (1440, 720))

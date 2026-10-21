@@ -11,6 +11,9 @@ import inspect
 import json
 import os
 import sys
+import uuid
+import zipfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -174,13 +177,15 @@ def run_edit(name, prompt, editor_value, variant, seed, steps, guidance, input_m
     )
     visual = make_visual(overlay, result, f"{input_mode}\n{model_prompt}", original=original)
 
-    run_dir = OUTPUT_ROOT / f"{slugify(cleaned_name)}_{timestamp()}"
+    run_dir = OUTPUT_ROOT / f"{slugify(cleaned_name)}_{timestamp()}_{uuid.uuid4().hex[:8]}"
     run_dir.mkdir(parents=True, exist_ok=False)
     original.save(run_dir / "original.png")
     overlay.save(run_dir / "overlay.png")
     result.save(run_dir / "result.png")
     visual.save(run_dir / "visual.png")
     config = {
+        "run_id": run_dir.name,
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "name": cleaned_name,
         "prompt": cleaned_prompt,
         "effective_prompt": model_prompt,
@@ -199,7 +204,27 @@ def run_edit(name, prompt, editor_value, variant, seed, steps, guidance, input_m
         json.dumps(config, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    return result, visual, config, str(run_dir)
+    # ImageFolder supports multiple *_file_name image columns in each row.
+    dataset_row = {
+        "original_file_name": "original.png",
+        "overlay_file_name": "overlay.png",
+        "result_file_name": "result.png",
+        "visual_file_name": "visual.png",
+        "reference_file_names": config["reference_order"],
+        **{key: config[key] for key in (
+            "run_id", "created_at", "name", "prompt", "effective_prompt", "input_mode", "run"
+        )},
+    }
+    (run_dir / "metadata.jsonl").write_text(
+        json.dumps(dataset_row, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    archive_dir = OUTPUT_ROOT.parent / "gradio_exports"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    archive = archive_dir / f"{run_dir.name}.zip"
+    with zipfile.ZipFile(archive, "x", compression=zipfile.ZIP_DEFLATED) as bundle:
+        for path in sorted(run_dir.iterdir()):
+            bundle.write(path, arcname=path.name)
+    return result, visual, config, str(run_dir), str(archive)
 
 
 def build_demo() -> gr.Blocks:
@@ -260,6 +285,7 @@ def build_demo() -> gr.Blocks:
                 visual = gr.Image(label="Visual", type="pil")
                 config = gr.JSON(label="Config")
                 saved = gr.Textbox(label="Saved to")
+                download = gr.File(label="Download run (images + metadata ZIP)")
 
         variant.change(_apply_variant, inputs=variant, outputs=[steps, guidance])
         prompt.change(effective_prompt, inputs=[prompt, input_mode], outputs=prompt_preview)
@@ -267,7 +293,7 @@ def build_demo() -> gr.Blocks:
         run_btn.click(
             run_edit,
             inputs=[name, prompt, editor, variant, seed, steps, guidance, input_mode],
-            outputs=[result, visual, config, saved],
+            outputs=[result, visual, config, saved, download],
             concurrency_limit=1,
         )
     return demo
